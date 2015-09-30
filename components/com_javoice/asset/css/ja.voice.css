@@ -12,7 +12,7 @@
 ---------------------------------------------*/
 ul.jav-menu li.jav-your-box-item,
 ol li.jav-box-item {
-	border-bottom: 1px solid #E8E8E8;
+	border: 1px solid #E8E8E8;
 	display: block;
 	margin: 0 0 10px 0 !important;
 	min-height: 100px;
@@ -244,7 +244,8 @@ div.jav-item-details h2.contentheading {
 div.jav-item-details a.jav-item-title {
 	display: block;
 	float: left;
-	margin: 0 10px 0 0;
+	font-size: 16px;
+  margin: -10px 10px 0 5px;
 	padding: 0;
 }
 
