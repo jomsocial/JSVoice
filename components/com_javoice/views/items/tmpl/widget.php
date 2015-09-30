@@ -64,7 +64,7 @@ defined ( '_JEXEC' ) or die ( 'Restricted access' );
 					<div>												
 						<div class="jav-search">
 							<?php $link  = JURI::base() . 'index.php?option=com_javoice&amp;view=items&amp;type='.$type->id.'&amp;layout=widget_search&amp;tmpl=component&amp;Itemid='.$Itemid.'&amp;forums='.JRequest::getVar('forums_id')?>
-			  				<form name="jav-search-form-<?php echo $type->id?>" action="index.php" method="get" onsubmit="if(	$('key-<?php echo $type->id?>').value!='<?php echo $type->search_description?>' && 	$('key-<?php echo $type->id?>').value.length>0){ jav_findWord(event,$('key-<?php echo $type->id?>'), '<?php echo $link?>', '<?php echo $type->id?>', 0); } else { $('key-<?php echo $type->id?>').addClass('input_error'); } return false;">
+			  				<form name="jav-search-form-<?php echo $type->id?>" action="index.php" method="get" onsubmit="if( jQuery('#key-<?php echo $type->id?>').val()!='<?php echo $type->search_description?>' && jQuery('#key-<?php echo $type->id?>').val().length>0){ jav_findWord(event, jQuery('#key-<?php echo $type->id?>')[0], '<?php echo $link?>', '<?php echo $type->id?>', 0); } else { jQuery('#key-<?php echo $type->id?>').addClass('input_error'); } return false;">
 							
 							  	<span class="jav-search-title"><?php echo $type->search_title?></span>
 								<div class="jav-search-field" >

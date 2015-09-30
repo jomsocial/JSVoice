@@ -212,7 +212,7 @@ if($types){?>
 				<div class="jav-search">
 					<?php $link  = JURI::base() . 'index.php?option=com_javoice&view=items&type='.$type->id.'&layout=search&tmpl=component&Itemid='.$Itemid.'&forums='?>
                    	<?php if($javconfig["systems"]->get("is_enable_tagging",0) && JRequest::getVar("tagid",0)): ?>
-                    	<form name="jav-search-form-<?php echo $type->id?>" action="index.php" method="get" onsubmit="if(	$('key-<?php echo $type->id?>').value!='<?php echo addslashes($type->search_description);?>' && 	$('key-<?php echo $type->id?>').value.length>0) {jav_findWord(event,$('key-<?php echo $type->id?>'), '<?php echo $link?>', '<?php echo $type->id?>', 0	); } else { $('key-<?php echo $type->id?>').addClass('input_error'); } return false;">
+                    	<form name="jav-search-form-<?php echo $type->id?>" action="index.php" method="get" onsubmit="if( jQuery('#key-<?php echo $type->id?>').val()!='<?php echo addslashes($type->search_description);?>' && jQuery('#key-<?php echo $type->id?>').val().length>0) {jav_findWord(event,jQuery('#key-<?php echo $type->id?>')[0], '<?php echo $link?>', '<?php echo $type->id?>', 0); } else { jQuery('#key-<?php echo $type->id?>').addClass('input_error'); } return false;">
 					
 					  	<span class="jav-search-title"><?php echo $type->search_title?></span>
 						<div class="jav-search-field">				
@@ -224,11 +224,11 @@ if($types){?>
 							    
 		  				</form>
 					<?php else: ?>
-                    	<form name="jav-search-form-<?php echo $type->id?>" action="index.php" method="get" onsubmit="if(	$('key-<?php echo $type->id?>').value!='<?php echo addslashes($type->search_description);?>' && 	$('key-<?php echo $type->id?>').value.length>0) {jav_findWord(event,$('key-<?php echo $type->id?>'), '<?php echo $link?>'+ $('forums-<?php echo $type->id?>').value, '<?php echo $type->id?>', 0	); } else { $('key-<?php echo $type->id?>').addClass('input_error'); } return false;">
+                    	<form name="jav-search-form-<?php echo $type->id?>" action="index.php" method="get" onsubmit="if( jQuery('#key-<?php echo $type->id?>').val()!='<?php echo addslashes($type->search_description);?>' && jQuery('#key-<?php echo $type->id?>').val().length>0) {jav_findWord(event,jQuery('#key-<?php echo $type->id?>')[0], '<?php echo $link?>'+ jQuery('#forums-<?php echo $type->id?>').val(), '<?php echo $type->id?>', 0); } else { jQuery('#key-<?php echo $type->id?>').addClass('input_error'); } return false;">
 					
 					  	<span class="jav-search-title"><?php echo $type->search_title?></span>
 						<div class="jav-search-field">				
-				  			<input type="text" size="50" id="key-<?php echo $type->id?>" name="key-<?php echo $type->id?>" maxlength="100" class="inputbox"  onkeyup="jav_findWord(event, this, '<?php echo $link?>'+ $('forums-<?php echo $type->id?>').value, '<?php echo $type->id?>'); return false;"  onfocus="if(this.value=='<?php echo trim(addslashes($type->search_description));?>') this.value='';" onblur="if(this.value=='') this.value='<?php echo trim(addslashes($type->search_description))?>';" value="<?php echo trim(addslashes($type->search_description))?>"/>
+				  			<input type="text" size="50" id="key-<?php echo $type->id?>" name="key-<?php echo $type->id?>" maxlength="100" class="inputbox"  onkeyup="jav_findWord(event, this, '<?php echo $link?>'+ jQuery('#forums-<?php echo $type->id?>').val(), '<?php echo $type->id?>'); return false;"  onfocus="if(this.value=='<?php echo trim(addslashes($type->search_description));?>') this.value='';" onblur="if(this.value=='') this.value='<?php echo trim(addslashes($type->search_description))?>';" value="<?php echo trim(addslashes($type->search_description))?>"/>
 				  			<?php $button = $type->search_button?$type->search_button:JText::_('SEARCH');?>
 							<input type="submit" value="<?php echo $button?>" name="submit-<?php echo $type->id?>" class="button submit-search" />
 							<img class="search-loading" style="display: none" src="<?php echo JURI::base();?>components/com_javoice/asset/images/loading-small.gif" alt="<?php echo JText::_('LOADING')?>"/>

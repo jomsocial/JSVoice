@@ -15,7 +15,7 @@ global $javconfig;
 <?php $Itemid = JRequest::getInt('Itemid');?>
 <ol>
 	<!--<li class="back">
-		<a onclick="jav_reset('key-<?php echo $this->type_id?>'); jav_findWord($('key-<?php echo $this->type_id?>'), '<?php echo JURI::base(); ?>index.php?option=com_javoice&view=items&type=<?php echo $this->type_id?>&layout=items&tmpl=component&amp;Itemid=<?php echo $Itemid?>', '<?php echo $this->type_id?>'); return false;" href="javascript:void(0)">
+		<a onclick="jav_reset('key-<?php echo $this->type_id?>'); jav_findWord(jQuery('#key-<?php echo $this->type_id?>')[0], '<?php echo JURI::base(); ?>index.php?option=com_javoice&view=items&type=<?php echo $this->type_id?>&layout=items&tmpl=component&amp;Itemid=<?php echo $Itemid?>', '<?php echo $this->type_id?>'); return false;" href="javascript:void(0)">
 			<?php echo JText::_('BACK_TO_TOP_IDEAS')?>
 		</a>
 	</li>
