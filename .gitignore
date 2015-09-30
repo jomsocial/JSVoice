@@ -523,3 +523,5 @@
 /index.php
 /joomla.xml
 /*.txt
+/administrator/components/com_community/*
+/components/com_community/*
