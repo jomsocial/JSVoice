@@ -160,9 +160,11 @@ class javoiceModelvoicetypes extends JAVBModel {
 				$neworder = -1;
 			}
 		}
-		return JHtmlList::ordering('ordering', $query, '', $item, $neworder);
-		
-		//return JHTML::_ ( 'list.specificordering', $item, $item->id, $query );
+        jimport( 'joomla.html.html.list' );
+
+		//return JHtmlList::ordering('ordering', $query, '', $item, $neworder);
+
+		return JHTML::_ ( 'list.specificordering', $item, (isset($item->id) && $item->id) ? $item->id : 0, $query );
 	}
 	function published($publish) {
 		$db = JFactory::getDBO ();
