@@ -477,8 +477,8 @@ class JAVoiceControllerItems extends JAVFController {
 		$result = true;
 		$isShowCaptcha 			= 0;
 		
-		$is_enable_captcha		= $javconfig['plugin']->get('is_enable_captcha',1);
-		$is_enable_captcha_user = $javconfig['plugin']->get('is_enable_captcha_user',1);
+		$is_enable_captcha		= $javconfig['plugin']->get('is_enable_captcha',0);
+		$is_enable_captcha_user = $javconfig['plugin']->get('is_enable_captcha_user',0);
 		
 		$currentUserInfo		= JFactory::getUser();
 		if((($currentUserInfo->guest && $is_enable_captcha) || (!$currentUserInfo->guest && $is_enable_captcha_user))&& ($currentUserInfo->get ( 'aid' )<2)){

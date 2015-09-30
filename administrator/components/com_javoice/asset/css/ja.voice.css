@@ -1,0 +1,780 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Voice Package for Joomla 2.5 & 3.x
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+div.div-input {
+	padding-bottom: 10px;
+}
+.jav-starting-status {
+	padding-left: 20px;
+}
+
+#jav-ul-vote-option.ss-magiclist-ul {
+	border: 0 none;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-top: 0.5em;
+	padding: 0;
+}
+
+#jav-ul-vote-option li {
+	line-height: 1.5em;
+	padding: 0 5px 0 5px !important;
+}
+
+.jav-input-value {
+	width: 30px;
+}
+
+.jav-input-title {
+	width: 170px;
+}
+
+.jav-span-value,
+.jav-span-title,
+.jav-span-title-description {
+	color: #999999;
+}
+
+.jav-span-title {
+	padding-left: 15px;
+}
+
+.jav-span-title-description {
+	padding-left: 160px;
+}
+
+.jav-span-value-description {
+	padding-left: 5px;
+}
+
+.jav-input-description {
+	width: 250px;
+}
+
+fieldset.border-radius {
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+}
+textarea.jav-editor-code{
+	background:transparent url(../images/line-numbers.png) no-repeat scroll 0 0;
+	font-family:monospace;
+	font-size:13px;
+	height:500px;
+	line-height:16px;
+	margin-right:26px;
+	padding-left:30px;
+	padding-top:11px;
+	width:95%;
+}
+input:focus, select:focus, textarea:focus {
+	background-color:#FFFFDD;
+}
+.configuration,
+.configuration li{
+	display: inline;
+}
+
+#iContent {
+	font-size: 11px !important;
+}
+form li.actived {
+	background-color:#FFFFCC;
+}
+ul.ja-forums li{
+	clear: both;
+}
+
+.tool-tip {
+max-width: 400px;
+}
+#jav-system-message {
+	background:#EFE7B8 url(../images/help.png) no-repeat scroll 10px 8px !important;
+	margin-bottom:10px;
+	padding:10px 2px 10px 30px;
+	font-weight:bold;
+	border-bottom:3px solid #F0DC7E;
+	border-top:3px solid #F0DC7E;
+	color:#CC0000;	
+}
+#ja-wrap-color {
+	z-index: 1000;	
+	top: 50px;
+	position: fixed;
+}
+#ja-form-color {
+	background: #999999;
+	border: 8px solid #999999;
+	-moz-border-radius: 5px;
+	position: absolute;
+	-webkit-border-radius: 5px;
+	z-index: 100;
+}
+.i-color{
+	border:none;
+}
+#ja-color-save{
+	position: absolute;
+	z-index:100;
+}
+#ja-color-cancel{
+	position: absolute;
+	z-index:100;
+}
+#ja-class-css{
+	position: absolute;
+	z-index:100;
+	font-size:10pt;
+	text-transform: uppercase; 
+	width: 70px;
+	top: 70px;
+	height: 20px;
+	padding-top: 5px;
+}
+#div-class-css{
+	position: absolute;
+	z-index:100;
+	border: 1px solid;
+	width: 70px;
+	height: 10px;
+	left: 80px;
+	top: 70px;
+}
+#div-tranparent{
+	position: absolute;
+	z-index:100;
+	height: 10px;
+	left: 75px;
+	top: 80px;
+	cursor: pointer;
+}
+#div-tranparent-box{
+	border:none;
+	width: 10px;
+	height: 10px;
+	float: left;
+}
+#div-tranparent-title{
+	float: left;
+	padding-top: 5px;
+}
+li img.screenshot {
+	float:left;
+	margin:0 8px 1px 0;
+}
+.jav-info{
+	padding-left: 50px;
+}
+.jav-heading-config{
+	font-weight: bold;
+}
+.jav-radio-config{
+	margin-top: 0px;
+}
+.jav-plugin-config{
+	margin-top:10px;
+	padding:10px 30px 5px;
+}
+#is_show_avatar_content{
+	padding-right:270px;
+	padding-top: 10px;
+}
+#is_show_avatar_content label{
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	background:#D6D6D6 none repeat scroll 0 0;
+	display:block;
+	float:right;
+	margin-right:100px;
+	height:80px;
+	line-height:1em !important;
+	position:relative;
+	text-align:center;
+	width:120px;
+	margin: 5px 15px 5px;	
+}
+#is_show_avatar_content label img{
+	display:block;
+	margin:10px auto 2px;
+	
+}
+
+
+ul.ja-list-checkboxs {
+	margin: 5px 0 0 5px;
+	padding: 0;
+}
+
+ul.ja-list-checkboxs li {
+	margin: 0 0 2px;
+	padding: 12px  10px 12px 20px;
+	line-height: 1.3em;
+	list-style: none;
+}
+
+ul.ja-list-checkboxs li.row-1 {
+	background: #f9f9f9;
+}
+
+ul.ja-list-checkboxs li label {
+	line-height: 1em;
+	cursor: pointer;
+	font-weight: bold;
+}
+.box {
+	-moz-border-radius-bottomleft: 7px;
+	-moz-border-radius-bottomright: 7px;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border: 1px solid #ddd;
+}
+
+.box h2 {
+	padding: 0 20px;
+	background: url("../images/grad4.gif") left top repeat-x;
+	margin: 0px;
+	height: 42px;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	line-height: 42px;
+	font-size: 12px;
+}
+.ja-list-avatars {
+	margin: 0;
+	padding: 0;
+}
+
+.ja-list-avatars li {
+	clear:none !important;
+	float:left;
+	height:100px;
+	line-height:27px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0 4px 0 0 !important;
+	padding:0;
+	position:relative;
+	width:150px;
+}
+.ja-list-avatars li {
+	clear: none !important;
+	float: left;
+	height: 27px;
+	line-height: 27px;
+	list-style: none;
+	margin: 0 5px 0 0;
+	padding: 0;
+	position: relative;
+	height: 100px;
+	margin: 0 4px 0 0 !important;
+	position: relative;
+	width: 150px;
+}
+.ja-list-avatars li label {
+	position: relative;	
+}
+.ja-list-avatars li label {
+	background: #f9f9f9 none repeat scroll 0 0;
+	display: block;
+	float: left;
+	height: 100px;
+	line-height: 1em !important;
+	position: relative;
+	text-align: center;
+	width: 150px;
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border: 1px solid #f0f0f0;
+}
+
+.ja-list-avatars li img {
+	display: block;
+	margin: 20px auto 0;
+}
+
+.ja-list-avatars li label:hover,.ja-list-avatars li.active label {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	-moz-box-shadow: 0 1px 1px #666666;
+	background: #fefede none repeat scroll 0 0;
+}
+
+
+.submit_comment {
+	margin-left: 5px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	background-color: #F9F9F9;
+	padding-bottom: 2px;
+}
+
+#jacom-maincontent fieldset.TopFieldset {
+	padding: 12px 5px;
+	background: url("../images/grad5.gif") left top repeat-x;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	margin: 0px;
+}
+html[xmlns] .clearfix {
+	display:block;
+}
+.tbl_appearance td {
+	vertical-align:top;
+}
+#ja-block-smileys ul{
+	display: inline;
+}
+
+/* COMMENT TEXTAREA ---*/
+#jav-dialog-content .form-actions li, #jav-reply-voice .form-actions li{
+	border:medium none;
+	clear:none;
+	display:block;
+	float:left;
+	font-size:85%;
+	height:16px;
+	margin:1px;
+	padding:0;
+	/*text-indent:-9999em;*/
+	width:16px;
+	font-size: 85%;
+	text-indent: -9999em;
+}
+#jav-dialog-content .form-actions li a, #jav-reply-voice .form-actions li a{
+	background-position:center center;
+	background-repeat:no-repeat;
+	display:block;
+	height:16px;
+	opacity:0.5;
+	width:16px;
+}
+#jav-dialog-content li, #jav-reply-voice li{
+background-image:none !important;
+list-style:none outside none !important;
+padding:0;
+}
+#jav-post-new-voice {
+	clear: both;
+}
+#jav-dialog-content #jav-post-new-voice ul.form-comment,
+#jav-dialog-content #jac-edit-comment ul.form-comment,
+#jav-reply-voice #jav-reply-new-comment ul.form-comment,
+#jav-reply-voice #jav-reply-new-comment ul.form-comment{
+	margin: 0 0 10px;
+	padding: 0;
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+#jav-dialog-content #jav-upload, 
+#jav-reply-voice #jac-reply-upload{
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	padding:10px;
+	position:relative;
+}
+
+#jav_result_upload, #jav_result_reply_upload{
+		
+}
+
+#jav-dialog-content .form-comment textarea,
+#jav-reply-voice .form-comment textarea {
+	border: none;
+}
+#jav-dialog-content .jac-form-guest,
+#jav-reply-voice .jac-form-guest{
+	float: left;
+	padding-right: 50px;
+}
+#jav-dialog-content #jav-post-new-voice ul.form-comment li.form-comment,
+#jav-reply-voice #jav-reply-new-comment ul.form-comment li.form-comment{
+	margin: 0;
+}
+
+#jav-dialog-content .form-actions .jav-form-act-smiley a,
+#jav-reply-voice .form-actions .jav-form-act-smiley a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-smileys.png) !important;
+}
+
+#jav-dialog-content .form-actions .form-act-filed-open a,
+#jav-reply-voice .form-actions .form-act-filed-open a {
+	background-image: url(../../../../../components/com_javoice/asset/images/status-of-tag-a.png) !important;
+	background-position: 0 -32px;	
+}
+
+#jav-dialog-content .form-actions .form-act-filed-close a,
+#jav-reply-voice .form-actions .form-act-filed-close a{
+	background-image: url(../../../../../components/com_javoice/asset/images/status-of-tag-a.png) !important;
+	background-position: 0 -16px;
+}
+
+
+#jav-dialog-content  .plugin_embed .smileys a,
+#jav-reply-voice  .plugin_embed .smileys a{
+	background: none !important;
+}
+
+#jav-dialog-content  .plugin_embed,
+#jav-reply-voice  .plugin_embed{
+	position: relative;
+}
+
+#jav-dialog-content  .plugin_embed .smileys,
+#jav-reply-voice  .plugin_embed .smileys {
+	width: 105px !important;
+	float: none;
+}
+
+#jav-dialog-content .form-actions .form-act-attach a,
+#jav-reply-voice .form-actions .form-act-attach a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-attach.png) !important;
+}
+
+#jav-dialog-content .form-actions .form-act-utube a,
+#jav-reply-voice .form-actions .form-act-utube a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-youtube.png) !important;
+}
+
+#jav-dialog-content .form-actions .form-act-spell a,
+#jav-reply-voice .form-actions .form-act-spell a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-tick.png) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-bold-text a,
+#jav-reply-voice .form-actions .jac-bbcode-bold-text a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-bold.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-italic-text a,
+#jav-reply-voice .form-actions .jac-bbcode-italic-text a {
+		background-image: url(../../../../../components/com_javoice/asset/images/icon-i.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-large a,
+#jav-reply-voice .form-actions .jac-bbcode-large a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-large.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-horizontal-rule a,
+#jav-reply-voice .form-actions .jac-bbcode-horizontal-rule a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-hr.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-underline-text a,
+#jav-reply-voice .form-actions .jac-bbcode-underline-text a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-u.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-line-through-text a,
+#jav-reply-voice .form-actions .jac-bbcode-line-through-text a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-s.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-subscript a,
+#jav-reply-voice .form-actions .jac-bbcode-subscript a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-sub.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-superscript a,
+#jav-reply-voice .form-actions .jac-bbcode-superscript a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-sup.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-quotation a,
+#jav-reply-voice .form-actions .jac-bbcode-quotation a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-quote.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-link a,
+#jav-reply-voice .form-actions .jac-bbcode-link a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-link.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-image a,
+#jav-reply-voice .form-actions .jac-bbcode-image a{
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-img.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-youtube	 a,
+#jav-reply-voice .form-actions .jac-bbcode-youtube	 a{
+	background-image: url(../../../../../components/com_javoice/asset/images/youtube.ico) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-medium a,
+#jav-reply-voice .form-actions .jac-bbcode-medium a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-medium.gif) !important;
+}
+
+#jav-dialog-content .form-actions .jac-bbcode-bullet-list-text a,
+#jav-reply-voice .form-actions .jac-bbcode-bullet-list-text a {
+	background-image: url(../../../../../components/com_javoice/asset/images/icon-ul.gif) !important;
+}
+
+#jav-dialog-content .form-actions .form-act-bbcode-status,
+#jav-reply-voice .form-actions .form-act-bbcode-status {
+	font-size: 85%;
+	color: #666;
+	margin-top: 2px;
+	width: 600px;
+	float: left;
+}
+
+#jav-dialog-content .form-actions .form-act-bbcode-status li,
+#jav-reply-voice .form-actions .form-act-bbcode-status li {
+	text-indent: 0;
+	width: auto;
+}
+
+#jav-dialog-content .form-actions .form-act-bbcode-status a,
+#jav-reply-voice .form-actions .form-act-bbcode-status a {
+	text-decoration: none;
+	border-bottom: 1px dotted #999;
+	color: #666;
+	width: auto;
+}
+
+#jav-dialog-content .form-actions .form-act-bbcode-status a:hover,
+#jav-reply-voice .form-actions .form-act-bbcode-status a:hover {
+	cursor: help;
+	color: #333;
+	border-bottom: 1px dotted #333;
+}
+
+#jav-dialog-content .form-actions .form-act-bbcode,
+#jav-reply-voice .form-actions .form-act-bbcode {
+	font-size: 85%;
+	color: #666;
+	margin: 0;
+	width: 400px;
+	float: left;
+}
+
+#jav-dialog-content .form-actions .form-act-bbcode a:hover,
+#jav-reply-voice .form-actions .form-act-bbcode a:hover {
+	color: #333;
+}
+
+#jav-dialog-content .form-actions .form-act-filed-close,
+#jav-dialog-content .form-actions .form-act-filed-open,
+#jav-reply-voice .form-actions .form-act-filed-close,
+#jav-reply-voice .form-actions .form-act-filed-open {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#jav-dialog-content .form-actions li.for-count-text,
+#jav-reply-voice .form-actions li.for-count-text {
+	right: 40px !important;
+	top: 0 !important;
+	font-size: 150%;
+	font-weight: bold;
+}
+.form-comment{
+	clear: both;
+}
+.error{
+	color: #CC0000 !important;
+}
+#jav_tag_form {
+	position: relative;	
+}
+#jav_tag_form #result {
+	height:20px;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	padding:5px;
+	margin-bottom:10px;
+	background-color:#FFFF99;
+}
+#jav_tag_form #country{
+	padding:3px;
+	border:1px #CCC solid;
+	font-size:17px;
+}
+#jav_tag_form .suggestionsBox {
+	background-color:#000000;
+	border-top:3px solid #000000;
+	color:#FFFFFF;
+	left:63px;
+	margin:26px 0 0;
+	padding:0;
+	position:absolute;
+	top:3px;
+	width:209px;
+	z-index:999;
+}
+#jav_tag_form .suggestionList {
+	margin: 0px;
+	padding: 0px;
+}
+#jav_tag_form .suggestionList ul li {
+	list-style:none;
+	margin: 0px;
+	padding: 6px;
+	border-bottom:1px dotted #666;
+	cursor: pointer;
+}
+#jav_tag_form .suggestionList ul li:hover {
+	background-color: #FC3;
+	color:#000;
+}
+#jav_tag_form ul {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFF;
+	padding:0;
+	margin:0;
+}
+
+#jav_tag_form .load{
+background-image:url(loader.gif);
+background-position:right;
+background-repeat:no-repeat;
+}
+
+#jav_tag_form #suggest {
+	position:relative;
+}
+
+#jav_tags_list ul.javtaglist{
+	max-height:900px !important;
+	padding:0;
+	margin:0 -2px 0.5em;
+	max-height:180px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	width:100%;
+}
+#jav_tags_list ul.javtaglist li{
+	border:1px solid #E1E1E1;
+	line-height:15px !important;
+	margin-right:3px;
+	padding:0 6px 3px 16px !important;
+	-moz-border-radius:6px 6px 6px 6px;
+	background:url("../images/remove.png") no-repeat scroll 0 0 transparent;
+	cursor:pointer;
+	float:left;
+	height:14px;
+	line-height:14px;
+	overflow:hidden;
+	padding:0 6px 0 16px !important;
+}
+#jacom-maincontent fieldset label, fieldset span.faux-label{
+	float:none;
+	display:inline;
+}
+#jacom-maincontent fieldset input, fieldset textarea, fieldset select, fieldset img, fieldset button{
+	float:none;
+}
+
+label.radiobtn {
+	clear:none;
+	margin:5px 5px 5px 0;
+	min-width:35px !important;
+}
+
+input, select {
+    font-size: 10px !important;
+	background:none !important;
+}
+
+fieldset ol, ol#property-values {
+	padding:0 0 0 40px !important;
+	margin:11px 0 !important;
+}
+
+fieldset li, ol#property-values li {
+	list-style:decimal !important;
+}
+
+fieldset ul li {
+	list-style:none !important;
+}
+
+p.info {
+	margin-left:0;
+}
+
+
+div.ja_tags input{
+	float:left !important;
+}
+/*Style for admin joomla 3.0*/
+
+fieldset.adminform {
+	margin: 0 !important;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	background-color: #F4F4F4;
+}
+
+.submenu-box, #submenu-box div.m {
+	padding: 0px 8px !important;
+	border: 1px solid #CCC;
+	padding: 0 8px;
+	background-color: #F4F4F4;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#jacom-maincontent #submenu {
+	margin: 0;
+	padding: 0;
+	line-height: 115%;
+	list-style: none;
+}
+
+#jacom-maincontent #submenu li {
+	
+	float: none;
+	display: inline;
+	cursor: pointer;
+}
+
+#jacom-maincontent #submenu li a {
+	color: #0B55C4;
+	border-right: 1px solid #ccc;
+	padding: 0 15px;
+	font-weight: bold;
+	line-height: 30px;
+	height: 12px;
+}
+
+#jacom-maincontent #submenu li a.active, #jacom-maincontent #submenu li a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+.box {
+    border: 1px solid #DDDDDD;
+}

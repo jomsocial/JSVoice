@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<extension type="component" version="1.7" method="upgrade">
+	<name>JA Voice</name>
+	
+	<creationDate>29 May 2013</creationDate>
+	<license>GNU/GPL V2 for PHP files. Read Terms of Service for details</license>
+	<author>JoomlArt</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>1.1.0</version>
+	<description>
+	<![CDATA[
+	 	<style type="text/css">
+	 		.mod-desc li{
+				margin-left:10px;
+				padding-left:12px;
+			}
+			.mod-desc p{
+				margin:15px 0;
+			}
+	 	</style>
+	 	<span style="color: #008000;"><strong>JA Voice Component for Joomla 2.5 and Joomla 3.1</strong></span><br />
+	 	<p><img alt="JA Voice Component" src="http://wiki.joomlart.com/images/6/63/Jaec_voice.png" /></p>
+		<div style='font-weight:normal'>
+	 	JA Voice is part of the JAEC Extensions Club, a Joomla!-based component to build community driven constructive conversations away from e-mails or forum. It enables gathering thoughts, ideas, feedback from users / customers in an organized structure, where ideas can be commented, voted up or down in a transparent way.<br />
+	 	<p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+	 	<ol>
+			<li>Voice Type & Forum Management.</li>
+			<li>Configurable Voting Control.</li>
+			<li>Powerful comments system support.</li>
+			<li>Track Conversation Groups and Status.</li>
+			<li>Handy Widget enhancement.</li>
+			<li>Flexible customization & design.</li>
+			<li>Multi-languages options.</li>
+			<li>Compatibile with any Joomla template.</li>
+			<li>Flexible Global Settings.</li>
+			<li>Friendly Frontend with Ajax technology.</li>
+		</ol>
+		<p><strong><span style="color: #ff0000;">Upgrade Methods:</span><br /></strong></p>
+		<ol>
+			<li>Standard joomla uninstall / reinstall method. OR</li>
+			<li>Module supports upgrade method. You can install new version directly over this version. Uninstallation is not required. Backup any customized file before upgrading, your settings would be saved though. OR</li>
+			<li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Managhttp://update.joomlart.com/#er</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li>
+		</ol>
+		<p><span style="color: #008000;"><strong>Links:</strong></span></p>
+		<ul>
+			<li><a target="_blank" href="http://www.joomlart.com/forums/forumdisplay.php?162-JA-Voice">JA Voice Component Forum</a></li>
+			<li><a target="_blank" href="http://pm.joomlart.com/browse/JAVOICEJIVI">Report Bug</a></li>
+			<li><a target="_blank" href="http://update.joomlart.com/">Updates &amp; Versions</a></li>
+			<li><a target="_blank" href="http://wiki.joomlart.com/wiki/JA_Voice_2.5/Installation">Wiki Site</a></li>
+		</ul>
+		<p>Copyright 2004 - 2013 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+		</div>
+	 ]]></description>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>javoice.php</filename>
+		<filename>router.php</filename>
+		<filename>controller.php</filename>
+		<folder>asset</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>packages</folder>
+		<folder>views</folder>
+	</files>
+	<administration>
+		<menu img="components/com_javoice/asset/images/javoice.png">COM_JAVOICE</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>javoice.php</filename>
+			<filename>controller.php</filename>
+			<filename>uninstall.javoice.php</filename>			
+			<folder>asset</folder>
+			<folder>controllers</folder>
+			<folder>installer</folder>			
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_javoice.ini</language>
+			<language tag="en-GB">en-GB.com_javoice.sys.ini</language>
+		</languages>
+
+	</administration>	
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB.com_javoice.ini</language>
+	</languages>
+	<install>
+		<sql folder="admin">
+			<file driver="mysql" charset="utf8">installer/sql/install.javoice.sql</file>
+		</sql>
+	</install>
+	<installfile>install.javoice.php</installfile>	
+	<uninstallfile>uninstall.javoice.php</uninstallfile>
+	<scriptfile>script.javoice.php</scriptfile>
+	<jaupdater>
+        <serviceUrl>
+            http://update.joomlart.com
+        </serviceUrl>
+        <tables>
+            <table>#__jav_actions_log</table>
+            <table>#__jav_admin_responses</table>
+            <table>#__jav_configs</table>
+			<table>#__jav_email_templates</table>
+			<table>#__jav_feeds</table>
+			<table>#__jav_forums</table>
+			<table>#__jav_forums_has_voice_types</table>
+			<table>#__jav_items</table>
+			<table>#__jav_logs</table>
+			<table>#__jav_temp_data</table>
+			<table>#__jav_voice_types</table>
+			<table>#__jav_voice_type_status</table>		
+        </tables>    
+    </jaupdater>
+</extension>

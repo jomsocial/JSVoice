@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+	<item name="dashboard" title="Admin Dashboard" link="option=com_javoice&amp;view=voice" class="adminmenu" />	
+	<item name="voicemanager" title="Voice Manager" link="option=com_javoice&amp;view=items" class="adminmenu"/>
+	<item name="voicetags" title="Tags Manager" link="option=com_javoice&amp;view=tags" class="adminmenu"/>
+	<item name="configglobal" title="Settings" link="#" class="adminmenu">	
+		<item name="configs" title="General" link="option=com_javoice&amp;view=configs" class="adminmenu"/>
+		<item name="voicetypes" title="Voice Types" link="option=com_javoice&amp;view=voicetypes" class="adminmenu"/>
+		<item name="voicetypesstatus" title="Status" link="option=com_javoice&amp;view=voicetypesstatus" class="adminmenu"/>
+		<item name="forums" title="Forums" link="option=com_javoice&amp;view=forums" class="adminmenu"/>
+		<item name="integrate" title="Comment System" link="option=com_javoice&amp;view=configs&amp;group=integrate" class="adminmenu"/>
+		<item name="permissions" title="Moderator" link="option=com_javoice&amp;view=configs&amp;group=permissions" class="adminmenu"/>
+		<item name="widgetsetup" title="Widget Setup" link="option=com_javoice&amp;view=widgetsetup" class="adminmenu"/>
+		<item name="feeds" title="Rss Manager" link="option=com_javoice&amp;view=feeds" class="adminmenu"/>
+		<item name="layout_plugins" title="Layout &amp; Plugins" link="option=com_javoice&amp;view=configs&amp;group=plugin" class="adminmenu"/>												
+	</item>		
+	<item name="customization" title="Design &amp; Customization" link="#" class="adminmenu">
+		<item name="email" title="Email Templates" link="option=com_javoice&amp;view=emailtemplates" class="adminmenu"/>
+		<item name="language" title="Languages" link="option=com_javoice&amp;view=managelang" class="adminmenu"/>
+		<item name="template" title="CSS &amp; Templates" link="option=com_javoice&amp;view=customtmpl" class="adminmenu"/>
+		<!--<item name="css" title="Customize CSS " link="option=com_javoice&amp;view=customcss" class="adminmenu"/>
+	--></item>
+	<item name="licensehelp" title="Documentation and Support" link="option=com_javoice&amp;layout=supportandlicense" class="adminmenu"></item>
+</menu>
