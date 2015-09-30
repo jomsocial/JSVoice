@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout filename="default" hidden="true">
+		<message><![CDATA[ Voice Main Layout]]></message>
+	</layout>
+	<layout filename="default_items" hidden="true">
+		<message><![CDATA[ Voice Layout]]></message>
+	</layout>
+	<layout filename="default_options" hidden="true">
+		<message><![CDATA[ Options Layout]]></message>
+	</layout>
+	<layout filename="default_forums" hidden="true">
+		<message><![CDATA[ Forums Layout]]></message>
+	</layout>	
+	<layout filename="default_form" hidden="true">
+		<message><![CDATA[ Add Voice Form Layout]]></message>
+	</layout>
+	<layout filename="default_form_edit" hidden="true">
+		<message><![CDATA[ Edit Voice Form Layout]]></message>
+	</layout>
+	<layout filename="default_msg_votes" hidden="true">
+		<message><![CDATA[ Voting Message Layout]]></message>
+	</layout>
+	<layout filename="default_paging" hidden="true">
+		<message><![CDATA[ Paging Layout]]></message>
+	</layout>
+	<layout filename="default_pathway" hidden="true">
+		<message><![CDATA[ Patway Layout]]></message>
+	</layout>
+	<layout filename="default_search_result" hidden="true">
+		<message><![CDATA[ Search Form Layout]]></message>
+	</layout>
+	<layout filename="default_your_items" hidden="true">
+		<message><![CDATA[ Your Voices Layout]]></message>
+	</layout>
+	<layout filename="item" hidden="true">
+		<message><![CDATA[ Voice Detail Layout]]></message>
+	</layout>
+	<layout filename="default_comment" hidden="true">
+		<message><![CDATA[ Comment Layout]]></message>
+	</layout>
+</metadata>

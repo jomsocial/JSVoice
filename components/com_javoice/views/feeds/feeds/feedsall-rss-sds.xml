@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.7.2" -->
+<?xml-stylesheet href="" type="text/css"?>
+<?xml-stylesheet href="" type="text/xsl"?>
+<rss version="0.91">
+    <channel>
+        <title>ALL RSS sds</title>
+        <description></description>
+        <link>http://localhost/jatc_t3_blank_j16_demo.v_trunk/</link>
+        <lastBuildDate>Fri, 18 Feb 2011 04:14:57 +0000</lastBuildDate>
+        <generator>FeedCreator 1.7.2</generator>
+        <item>
+            <title>i can not view completed idea</title>
+            <link>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=98&amp;type=2&amp;forums=1</link>
+            <description><![CDATA[<p>Up to 4 entries were marked "completed", but could not view them in the "completed" list</p>]]></description>
+            <author>0 &lt;&gt;</author>
+            <pubDate>Fri, 18 Feb 2011 04:14:00 +0000</pubDate>
+            <guid>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=98&amp;type=2&amp;forums=1</guid>
+        </item>
+        <item>
+            <title>Search / create new idea error in IE, Chrome, Safari</title>
+            <link>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=99&amp;type=2&amp;forums=1</link>
+            <description><![CDATA[<p>Search / create new idea error in IE, Chrome, Safari. Mouse-over Vote button but can not see description popup.</p>]]></description>
+            <author>0 &lt;&gt;</author>
+            <pubDate>Fri, 18 Feb 2011 04:14:00 +0000</pubDate>
+            <guid>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=99&amp;type=2&amp;forums=1</guid>
+        </item>
+        <item>
+            <title>template is making a good thing</title>
+            <link>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=66&amp;type=2&amp;forums=2</link>
+            <description><![CDATA[<p>This is a test message</p>]]></description>
+            <author>0 &lt;&gt;</author>
+            <pubDate>Fri, 18 Feb 2011 04:14:00 +0000</pubDate>
+            <guid>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=66&amp;type=2&amp;forums=2</guid>
+        </item>
+        <item>
+            <title>templates</title>
+            <link>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=65&amp;type=2&amp;forums=2</link>
+            <description></description>
+            <author>0 &lt;&gt;</author>
+            <pubDate>Fri, 18 Feb 2011 04:14:00 +0000</pubDate>
+            <guid>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=65&amp;type=2&amp;forums=2</guid>
+        </item>
+        <item>
+            <title>autom</title>
+            <link>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=60&amp;type=2&amp;forums=1</link>
+            <description><![CDATA[<p>This is a test</p>]]></description>
+            <author>0 &lt;&gt;</author>
+            <pubDate>Fri, 18 Feb 2011 04:14:00 +0000</pubDate>
+            <guid>http://localhost/jatc_t3_blank_j16_demo.v_trunk/index.php?option=com_javoice&amp;view=items&amp;layout=item&amp;cid=60&amp;type=2&amp;forums=1</guid>
+        </item>
+    </channel>
+</rss>

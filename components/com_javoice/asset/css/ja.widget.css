@@ -1,0 +1,262 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Voice Package for Joomla 2.5 & 3.x
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+#jav-feedback {
+	background:none repeat scroll 0 0 #DCD8D7;
+	font-size:12px;
+	outline:medium none;
+	overflow-x:hidden;
+	padding:10px 0;
+	width:100%;
+}
+#jav-feedback .javtabs-mainwrap {
+	padding:10px;
+}
+#jav-feedback .javtabs_container {
+	background: #FFFFFF;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	padding: 10px;
+	clear:both;
+}
+
+#jav-feedback .javtabs-panel {
+	padding: 0;
+}
+
+#jav-feedback ul.javtabs-title {
+	margin: 0;
+	padding: 0;
+	border-bottom: none;
+}
+
+#jav-feedback ul.javtabs-title li {
+	background: none;
+	border: none;
+}
+
+#jav-feedback .javtabs-mainwrap ul.javtabs-title li.first {
+	margin-left: -1px;
+}
+
+#jav-feedback .javtabs-mainwrap ul.javtabs-title li a {
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	background: #F0F0F0;
+	border-top: 1px solid #D8D8D8;
+	border-right: 1px solid #B2B2B2;
+	border-left: 1px solid #D8D8D8;
+}
+
+#jav-feedback .javtabs-mainwrap ul.javtabs-title li a:hover,
+#jav-feedback .javtabs-mainwrap ul.javtabs-title li a:focus,
+#jav-feedback .javtabs-mainwrap ul.javtabs-title li a:active {
+	color: #CC0000;
+}
+
+#jav-feedback ul.javtabs-title li.active a {
+	background: #FFFFFF;
+	color: #333333;
+}
+
+/* List items --*/
+#jav-feedback .jav-list-items {
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	background: #FFFFFF;
+}
+
+#jav-feedback .jav-list-items ol li {
+	margin-bottom: 2px;
+	border-bottom: 1px solid #D8D8D8;
+	border-top: 1px solid #FFFFFF;
+	clear: both;
+}
+
+#jav-feedback div.jav-badge {
+	background: #FCFCFC;
+	border-top: 1px solid #D8D8D8;
+	border-right: 1px solid #B2B2B2;
+	border-bottom: 1px solid #B2B2B2;
+	border-left: 1px solid #D8D8D8;
+}
+
+#jav-feedback .jav-item-details {
+	padding-top: 10px;
+}
+
+/* CSS Document */
+.jav-feedback_overlay {
+	position: fixed;
+	background-color: #000000;
+	height: 100%;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 998;
+}
+
+.jav-feedback_dialog {
+	position: fixed;	
+	z-index: 999;	
+	padding-bottom: 20px;
+	top: 20px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	background: #999999;
+}
+
+a.jav-copyright {
+	background: url(../images/powered-by.png) no-repeat 0px 0px;
+	display: block;
+	width: 169px;
+	height: 30px;
+	text-indent: -9000px;
+	float: right;
+	outline: none;
+}
+
+a.jav-copyright:hover,
+a.jav-copyright:focus,
+a.jav-copyright:active {
+	background: url(../images/powered-by.png) no-repeat 0px 0px;
+}
+
+#jav-feedback-form {
+	padding-bottom: 0 !important;
+}
+
+#jav-feedback-body {
+	padding-bottom: 0 !important;
+}
+
+#jav-feedback-body .jav-widget-col1 {
+	overflow: hidden;
+}
+
+#jav-feedback-body fieldset {
+	border:medium none;
+	float:left;
+}
+
+#jav-feedback-body .search{
+ 	width: 95% !important;
+}
+
+#jav-feedback-body .jav-search-result ol h3 {
+	font-size:100%;
+}
+
+#jav-feedback-body .jav-search-result ol {
+	background: none;
+}
+
+#jav-feedback-body .inputbox{
+	border: 2px solid #D8D8D8;
+	width:75%;
+}
+
+#jav-feedback-body .jav-search {
+	background:#F1F1F1 none repeat scroll 0 0;
+	border:1px solid #E5E5E5;
+	margin:0 0 20px;
+	padding:5px 10px 15px;
+	width: 95%;
+}
+
+a#jav-feedback_close {
+	background: url(../images/feedback-close.png) no-repeat 0px 0px;
+	width: 42px;
+	height: 42px;
+	text-indent: -300%;
+	right: 0px !important;
+	outline:none;
+	top: 0px !important;
+}
+
+a#jav-feedback_close:hover {
+	background-image: url(../images/feedback-close-hover.png);
+}
+
+/* Add new */
+#jav-feedback_dialog iframe {
+	background: transparent;
+	border: 0 !important;
+}
+
+#jav-btfeedback {
+	position: fixed;
+	top: 45%;
+	outline: none;
+	z-index:999;
+}
+
+a.jav-feedback-text {
+	background: #F0F0F0;
+	border: 2px solid #CCCCCC;
+	border-right: none;
+	color: #333333;
+	font-weight: bold;
+}
+
+a.jav-feedback-text:hover,
+a.jav-feedback-text:focus,
+a.jav-feedback-text:active {
+	background: #F7B351;
+	border-color: #F4940C;
+	color: #FFFFFF;
+}
+
+/* Images */
+a.jav-feedback-image1 {
+	width: 82px;
+	height: 26px;
+	text-indent: -9000px;
+	background: url(../images/feedback.gif) no-repeat 0px 0px !important;
+	padding: 0 !important;
+	outline: none;
+}
+
+a.jav-feedback-image1:hover,
+a.jav-feedback-image1:focus,
+a.jav-feedback-image1:active {
+	background: url(../images/feedback-active.gif) no-repeat 0px 0px !important;
+}
+
+a.jav-feedback-image2 {
+	width: 26px;
+	height: 82px;
+	text-indent: -9000px;
+	background: url(../images/feedback-ver.gif) no-repeat 0px 0px !important;
+	padding: 0 !important;
+	outline: none;
+}
+
+a.jav-feedback-image2:hover,
+a.jav-feedback-image2:focus,
+a.jav-feedback-image2:active {
+	background: url(../images/feedback-ver-active.gif) no-repeat 0px 0px !important;
+}
+
+body.contentpane {
+	background-color: transparent !important;
+	border: none !important;
+	margin : 0 !important;
+}
+#jav-feedback #javtabs-main .first {
+	background:none !important;
+}
+#jav-feedback  #javtabs-main .active {
+	background:none !important;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension 
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>[JA Voice] List of Voices</name>
+	<author>Joom Solutions</author>
+	<creationDate>29 May 2013</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>1.1.0</version>
+	<description>This module displays latest voices and users status</description>
+	<languages>
+			<language tag="en-GB">en-GB.mod_javlist_voices.ini</language>
+	</languages>
+	<files>
+	    <filename module="mod_javlist_voices">mod_javlist_voices.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+	<fields name="params">
+	  <fieldset name="basic" addfieldpath="/modules/mod_javlist_voices/assets/elements">
+        <field type="japanel" path="modules/mod_javlist_voices/assets/elements/" />
+		<field 
+			name="forums" 
+			type="forums" 
+			addfieldpath="/modules/mod_javlist_voices/elements" 
+			default="1"
+			multiple="true"
+			class="mselect"
+			label="JAVL_FORUMS" />
+    	<field 
+    		name="numberitems" 
+    		type="text" 
+    		default="5" 
+    		label="JAVL_NUMBER_VOICES" 
+    		description="JAVL_NUMBER_VOICES_DESC" />
+    	<field 
+    		name="showstatus" 
+    		type="radio" 
+    		default="1" 
+    		label="JAVL_SHOW_STATUS" 
+    		description="JAVL_SHOW_STATUS_DESC"
+    		class="btn-group">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field 
+			name="displaymode" 
+			type="list" 
+			default="0" 
+			label="JAVL_LISTMODE" >
+			<option value="0">JAVL_LATESTVOICES</option>
+			<option value="1">JAVL_TOPPOPULAR</option>
+		</field>
+	
+	  </fieldset>
+	  <fieldset name="advanced">
+	 	<field name="moduleclass_sfx" type="text" default=""
+			label="MODULE_CLASS_SUFFIX"
+				description="MODULE_CLASS_SUFFIX_DESC" />
+		<field name="cache" type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+		</field>
+	  </fieldset>		
+	</fields>
+	</config>
+</extension>

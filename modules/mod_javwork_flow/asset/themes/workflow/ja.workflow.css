@@ -1,0 +1,22 @@
+.mod_javwork_flow{
+	width: 100%;
+}
+
+.mod_javwork_flow ul {
+	width: 100%;
+}
+
+.mod_javwork_flow li {
+	width: 90px;
+	float: left;
+	margin: 0 5px 10px 5px !important;
+	padding: 10px !important;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	background: #FFFFFF !important;
+}
+
+.mod_javwork_flow li:hover,
+.mod_javwork_flow li:focus {
+	background: #F2F2F2 !important;
+}

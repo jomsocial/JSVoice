@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout filename="default" hidden="true">
+		<message><![CDATA[ User Main Layout]]></message>
+	</layout>
+	<layout filename="default_items" hidden="true">
+		<message><![CDATA[ User's Voices Layout]]></message>
+	</layout>
+	<layout filename="default_options" hidden="true">
+		<message><![CDATA[ Options Layout]]></message>
+	</layout>
+	<layout filename="default_emailref" hidden="true">
+		<message><![CDATA[ Email Preference Layout]]></message>
+	</layout>		
+	<layout filename="default_pathway" hidden="true">
+		<message><![CDATA[ Patway Layout]]></message>
+	</layout>	
+</metadata>

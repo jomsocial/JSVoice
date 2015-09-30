@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Voice details Layout">
+		<message><![CDATA[Show details of voice]]></message>
+	</layout>
+	<state>
+		<name>Voice details Layout</name>
+		<description>Show details of voice</description>
+		<params>			
+			<param name="item_id" type="text" size="5" default="" label="Voice ID" description="Please enter voice id. It must be integer." />
+		</params>
+	</state>	
+</metadata>

@@ -1,0 +1,7 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+#javm_slide .slide{
+	display:block;
+	float:left;
+}
