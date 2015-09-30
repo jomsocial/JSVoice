@@ -184,10 +184,10 @@ ul.jav-menu li.jav-your-box-item {
 /* BADGE STYLE
 ---------------------------------------------*/
 div.jav-badge {
-	left: 0;
+	left: 5px;
 	position: absolute;
-	top: 0;
-	width: 50px;
+	top: 5px;
+	width: 60px;
 }
 
 .jav-col2 div.jav-badge {
