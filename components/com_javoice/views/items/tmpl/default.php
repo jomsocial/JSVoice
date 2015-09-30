@@ -38,7 +38,7 @@ if($types){?>
 		jQuery(document).ready(function($){	
 			jav_init();	
 			jav_createTabs('#javtabs-main', '<?php echo JURI::base();?>index.php?option=com_javoice&view=items&layout=items&limitstart=0&tmpl=component&Itemid='+<?php echo $Itemid?>+'&type=');
-			$("jav-forum-select").value = 0;
+			jQuery("#jav-forum-select").val(0);
 <?php 	if($javconfig["systems"]->get("paging_type","normal") == "autoscroll"):?>			
 			javqueueListenerScroll();
 <?php endif;?>						

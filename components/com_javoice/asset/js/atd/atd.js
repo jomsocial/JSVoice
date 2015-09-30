@@ -29,7 +29,7 @@ function restoreTextArea(id, isAdmin)
 function check_atd(id, isAdmin)
 {	
     if(id) id = 'Reply';
-	if($('newVoiceContent'+id) != undefined && $('newVoiceContent'+id).value == undefined){
+	if(jQuery('#newVoiceContent'+id).length && !jQuery('#newVoiceContent'+id).val()){
 		//restore text area if it is second click
 		restoreTextArea(id, isAdmin);
 		return;

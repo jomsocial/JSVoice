@@ -166,13 +166,10 @@
 						id='#'+jav_header;
 						$(id).css('z-index','10');			
 						$('#loader').hide();
-					}			
-					$('li').click( function() {
-						var active = $$('li');
-						for ( var i = 0; i < active.length; i++) {
-							active[i].removeClass('focused');
-						}
-						this.addClass('focused');
+					}
+					$('li').click(function() {
+						$('li').addClass('focused')
+							.siblings().removeClass('focused');
 					});
 				}); 
 			}

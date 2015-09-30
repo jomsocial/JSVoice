@@ -735,9 +735,9 @@ function jav_ajaxPagination(url,divid) {
 	}
 	
 	new_url += 'layout=paging';
-	if($("jav-forum-select").value !=0) url += "&forums=" + $("jav-forum-select").value;
+	if(jQuery("#jav-forum-select").val() !=0) url += "&forums=" + jQuery("#jav-forum-select").val();
 	
-	if($("key-"+jav_option_type).value !='') url +="&key=" + $("key-"+jav_option_type).value;
+	if(jQuery("#key-"+jav_option_type).val() !='') url +="&key=" + jQuery("#key-"+jav_option_type).val();
 	url = jav_base_url+"?index.php"+url;
 	
 	jav_ajax_load(url, jav_option_type);
@@ -1255,7 +1255,7 @@ function jav_doPaging( limitstart, limit, order, key, url ){
 	if(key){
 		mainUrl += "&key=" + escape(key);
 	}
-	if($("jav-forum-select").value !=0) mainUrl += "&forums_id=" + $("jav-forum-select").value;
+	if(jQuery("#jav-forum-select").val() !=0) mainUrl += "&forums_id=" + jQuery("#jav-forum-select").val();
 	
 	if(url){
 		mainUrl = url+"&limitstart=" + eval(limitstart) + '&limit=' + eval(limit);
@@ -1831,7 +1831,7 @@ function jav_showNoticeToCenter(xwidth,yheight,divid) {
 } 
 
 function jav_change_vars(type_id){
-	jav_vote_total = $('votes-left-'+type_id).value;
+	jav_vote_total = jQuery('#votes-left-'+type_id).val();
 	jav_option_type = type_id;
 	var url = siteurl + '&task=load_forums&type='+parseInt(type_id);
 	jav_ajax_load(url);
@@ -1984,7 +1984,7 @@ function insertsmiley(content){
 }
 
 function loadNewCaptcha(){	            				
-	$("jav_image_captcha").src =  "index.php?option=com_javoice&view=items&task=displaycaptchaaddnew&tmpl=component&ran=" + Math.random();	
+	jQuery("#jav_image_captcha")[0].src =  "index.php?option=com_javoice&view=items&task=displaycaptchaaddnew&tmpl=component&ran=" + Math.random();	
 }
 function actionLoadNewCaptcha(action){
 	//show image load new
@@ -2064,19 +2064,19 @@ function insertSmileyReply(which) {
 function javOpenAttachFile(id){
 	if(id !=0 || id != ""){
 		//reply a new voice
-		if($("jav-form-upload-reply").style.display == "none"){
-			$("jav-form-upload-reply").style.display = "block";
+		if(jQuery("#jav-form-upload-reply")[0].style.display == "none"){
+			jQuery("#jav-form-upload-reply")[0].style.display = "block";
 		}else{
-			$("jav-form-upload-reply").style.display = "none";
+			jQuery("#jav-form-upload-reply")[0].style.display = "none";
 		}
 	}
 	//add new or edit voice
 	else{
-		if($("jav-form-upload").style.display == "none"){
-			$("jav-form-upload").style.display = "block";
+		if(jQuery("#jav-form-upload")[0].style.display == "none"){
+			jQuery("#jav-form-upload")[0].style.display = "block";
 			window.location.href += "#jav-form-upload";
 		}else{
-			$("jav-form-upload").style.display = "none";
+			jQuery("#jav-form-upload")[0].style.display = "none";
 		}
 	}
 }
@@ -2118,12 +2118,11 @@ function jav_handleEnter (field, event) {
 	return true;
 }     
 function jav_show_dialog(box, subbox){
-	$(box).setStyles({'display':'block'});
+	jQuery(box).css({'display':'block'});
 	var size = $(window.document.body).getSize();
 	var left = (size.size.x - $(subbox).offsetWidth)/2;
 	var top = 100;
-	
-	$(box).setStyles({'top':top, 'left':left});
+	jQuery(box).css({'top':top, 'left':left});
 }
 function suggest(inputString){
 	jQuery(document).ready( function($) {		

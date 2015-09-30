@@ -189,7 +189,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				</h4>
 					<ul class="jav-help">
 					<li>
-						<a onclick="$('jav-dialog').setStyle('display', 'block'); return false" href="javascript:void(0)"><?php echo JText::_('WHAT_HAPPENS_IF_I_RUN_OUT')."?";?></a>
+						<a onclick="jQuery('#jav-dialog').css('display', 'block'); return false" href="javascript:void(0)"><?php echo JText::_('WHAT_HAPPENS_IF_I_RUN_OUT')."?";?></a>
 					</li>
 				</ul>
 			</div>
