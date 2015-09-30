@@ -1837,11 +1837,11 @@ function jav_change_vars(type_id){
 	jav_ajax_load(url);
 }
 function closemessage(){
-	jQuery(document).ready(function($) {
+	(function($) {
 		id='#'+jav_header;
 		$(id).css('z-index','10');
 		$('#jav-msg-succesfull').css('display','none');
-	});	
+	})(jQuery)
 }
 function displaymessage(){
 	jQuery(document).ready(function($) {
