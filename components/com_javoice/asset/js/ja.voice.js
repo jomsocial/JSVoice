@@ -8,13 +8,9 @@ var timeout = '';
 var jav_ajax = '';
 var jav_header = 'ja-header';
 
-window.addEvent('domready', function (){
-	
-	if($('jav-msg-succesfull') != undefined){		
-		// obj = $('jav-msg-succesfull');
-		// $('jav-msg-succesfull').destroy();		
-		// obj.injectInside($(window.document.body));		
-		$('jav-msg-succesfull').inject($(window.document.body));		
+jQuery(document).ready(function($) {
+	if( !$("#jav-msg-succesfull").length ) {
+		$(document.body).append("<div id='jav-msg-succesfull'></div>");
 	}	
 });
 
@@ -1443,7 +1439,7 @@ function show_frm_response(node, id, responeid){
 		var name ='response-'+id;			
 		$("#div-"+name).show('fast');
 		$("#newVoiceContentReply").val($("#jav-content-respone-" + id).val());		
-		if(typeOf(total_attach_file)){			
+		if(typeof window.total_attach_file !== "undefined"){
 			$("#jav_result_reply_upload").html("");
 			
 			numberUpload = $('#jav-box-item-' + id + ' .jav-upload-form').find('input').length;
@@ -1468,7 +1464,7 @@ function show_frm_response(node, id, responeid){
 }
 
 function cancel_frm_response(){	
-	if(typeOf(jav_current_active_voice)){
+	if(typeof window.jav_current_active_voice !== "undefined"){
 		if(jav_current_active_voice){
 			jQuery(document).ready( function($) {
 				form = $("#jav-container-response-" + jav_current_active_voice).html();		
@@ -1633,7 +1629,7 @@ function show_frm_bestanswer(node, id, bestanswerid){
 		}
 		$("#newVoiceContentReply").val(jav_content_bestanswer);
 		
-		if(typeOf(total_attach_file)){			
+		if(typeof window.total_attach_file !== "undefined"){
 			$("#jav_result_reply_upload").html("");
 			
 			numberUpload = $('#jav-box-item-' + id + ' .jav-upload-form').find('input').length;
@@ -1726,7 +1722,7 @@ function jav_submit_bestanswer(item_id, id){
 }
 
 function cancel_frm_bestanswer(){
-	if(typeOf(jav_current_active_voice)){
+	if(typeof window.jav_current_active_voice !== "undefined"){
 		if(jav_current_active_voice){
 			jQuery(document).ready( function($) {
 				form = $("#jav-container-bestanswer-" + jav_current_active_voice).html();		
@@ -1944,12 +1940,9 @@ function loadLoginComplete(){
 	jQuery("input[name=return]").attr('value',jav_base_url_login) ;
 }
 jQuery(document).ready( function($) {
-	$('li').click( function() {
-		var active = $$('li');
-		for ( var i = 0; i < active.length; i++) {
-			active[i].removeClass('focused');
-		}
-		this.addClass('focused');
+	$('li').click(function() {
+		$('li').addClass('focused')
+			.siblings().removeClass('focused');
 	});
 });
 function display_plugin(type){
