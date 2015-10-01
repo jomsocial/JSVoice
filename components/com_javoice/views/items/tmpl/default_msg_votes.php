@@ -56,12 +56,34 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 </div>
 
 <script type="text/javascript">
+function jav_setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function jav_getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1);
+		if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+
 jQuery(document).ready(function($) {
 	var oldel = $('#jav-dialog');
 	oldel.appendTo( document.body );
 	oldel = $('#jav-firsttime-voting');
 	oldel.appendTo( document.body );
-	jav_showNoticeToCenter(400, 40, 'jav-firsttime-voting');
-	$('#jav-firsttime-voting').css('display', 'none');
+	if ( jav_getCookie('firsttime_voting_popup') ) {
+		$('#jav-firsttime-voting').css('display', 'none');
+	} else {
+		jav_setCookie('firsttime_voting_popup', 1, 1);
+		jav_showNoticeToCenter(400, 40, 'jav-firsttime-voting');
+	}
 });
 </script>
