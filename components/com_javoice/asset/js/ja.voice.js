@@ -72,16 +72,16 @@ function checkTypeOfTooltip(divId, type, width, height, time_delay) {
 			break;
 		case 'auto_hide':
 			$(divId).show('slow');
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				$(divId).hide('slow');
-			}).delay(time_delay);
+			}, time_delay);
 
 			$(divId).hover( function() {
 				clearTimeout (timeout);
 			}, function() {
-				timeout = ( function() {
+				timeout = setTimeout( function() {
 					$(divId).hide('slow');
-				}).delay(time_delay);
+				}, time_delay);
 			});
 			break;
 		case 'normal':
@@ -833,7 +833,7 @@ function jav_checkAddActionForJAComment(add_button){
 	jQuery(document).ready( function($) {
 		if (!jaCommentAddButton){
 			
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				
 				if(add_button){
 					/*Add button*/
@@ -865,7 +865,7 @@ function jav_checkAddActionForJAComment(add_button){
 					
 				}				
 				
-			}).delay(100);
+			}, 100);
 			
 		} else {		
 			clearTimeout(timeout);
@@ -1073,7 +1073,7 @@ function jav_checkAddActionForDisqus(add_button){
 	jQuery(document).ready( function($) {
 		if (!disqusAddButton){
 			
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				jav_checkAddActionForDisqus(add_button);
 				if(add_button){
 					/*Add button*/
@@ -1098,7 +1098,7 @@ function jav_checkAddActionForDisqus(add_button){
 				
 				disqusAddButton = true;
 				
-			}).delay(700);
+			}, 700);
 			
 		} else {		
 			clearTimeout(timeout);
@@ -1114,7 +1114,7 @@ function jav_jskit(add_button) {
 		if (!jskitAddButton){
 		/*Add button*/		
 			if (add_button) {
-				timeout = ( function() {
+				timeout = setTimeout( function() {
 					
 					jav_jskit(add_button);
 					
@@ -1136,7 +1136,7 @@ function jav_jskit(add_button) {
 						});					
 					}					
 					
-				}).delay(700);
+				}, 700);
 				
 				jskitAddButton = true;
 			}
@@ -1208,7 +1208,7 @@ function jav_checkAddActionForIntensedebate(add_button){
 	jQuery(document).ready( function($) {
 		if (typeof(id_add_action) != 'function' ){
 			
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				jav_checkAddActionForIntensedebate(add_button);
 				if(add_button){
 					/*Add button*/
@@ -1232,7 +1232,7 @@ function jav_checkAddActionForIntensedebate(add_button){
 					}
 				}
 				
-			}).delay(700);
+			}, 700);
 			
 		} else {		
 			clearTimeout (timeout);
@@ -1543,7 +1543,7 @@ function jav_submit_admin_response(item_id, id){
 function jav_checkLoadedComment (time_delay) {
 	jQuery(document).ready( function($) {
 		$('#jav-list-comment').hide();
-		timeout = ( function() {
+		timeout = setTimeout( function() {
 			if ($('#idc-container-parent'))
 			{
 				
@@ -1553,7 +1553,7 @@ function jav_checkLoadedComment (time_delay) {
 				clearTimeout (timeout);
 				jav_checkLoadedComment(jav_checkLoadedComment);
 			}
-		}).delay(time_delay);
+		}, time_delay);
 	});
 }
 
