@@ -10,7 +10,7 @@
  */
 /* COMMONT STYLE
 ---------------------------------------------*/
-ul.jav-menu li.jav-your-box-item,
+ul.jav-menu,
 ol li.jav-box-item {
 	border: 1px solid #E8E8E8;
 	display: block;
@@ -245,16 +245,13 @@ div.jav-item-details a.jav-item-title {
 	display: block;
 	float: left;
 	font-size: 16px;
-  margin: -10px 10px 0 5px;
+  	margin: -10px 10px 0 5px;
 	padding: 0;
 }
 
 ul.jav-menu li.jav-your-box-item a,
 ul.jav-menu li.jav-your-box-item li a {
-	border: none;
 	display: block;
-	float: left;
-	font-size: 12px;
 }
 
 ul.jav-menu li.jav-your-box-item p a {
@@ -609,9 +606,8 @@ div.jav-moderation .pop-in li a.jav-disable {
 .jav-item-status {
 	display: block;
 	float: left;
-	margin: 3px 0 0 0;
+	margin: -10px 0 0 0;
 	position: relative;
-	padding-left:3px;
 }
 
 .jav-tag {
@@ -619,7 +615,7 @@ div.jav-moderation .pop-in li a.jav-disable {
 	color: #FFFFFF !important;
 	font-size: 10px;
 	letter-spacing: 0;
-	padding: 2px 4px;
+	padding: 2px 10px;
 	display: inline-block;
 	text-transform: none;
 }
@@ -1715,7 +1711,11 @@ padding:0;
 	background: white !important;
 }
 img.jav-avatar{
-	float: left; padding-right: 3px; height: 24px; width: 24px;
+	float: left; 
+	border: 1px solid #ddd;
+	padding: 1px;
+	height: 24px; 
+	width: 24px;
 }
 .jav-title{
 	font-weight: normal !important;
@@ -1945,12 +1945,15 @@ h4 a.jav-item-title {
     background: url("../images/sc-q.gif") no-repeat scroll right bottom transparent;
     padding-right: 15px !important;
 }
-
-ul.jav-menu li a small {
-	color: #333;
-	float:none;
+/* My Votes */
+ul.jav-menu {
+	margin: 0;
 }
-
-ul.jav-menu li a.current small {
-	color: #fff;
+ul.jav-menu li.jav-your-box-item {
+	display: block;
+	margin: 5px;
+	position:relative;
+}
+.ja-title {
+	padding-top:5px;
 }

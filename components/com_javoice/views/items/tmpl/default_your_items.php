@@ -18,16 +18,16 @@ global $javconfig;
 <?php $user = JFactory::getUser();?>
 <?php $Itemid = JRequest::getInt('Itemid')?>
 <?php if($items){?>
-<h3><span><?php echo JText::_('YOUR_IDEAS')?></span></h3>
 
-<ul class="jav-menu">	    		
+<ul class="jav-menu">	
+<h4><span><?php echo JText::_('MY_VOTES')?></span></h4>		
 	<?php foreach ($items as $item){?>
 		<?php 
 		if( !$user->id && isset( $_COOKIE[md5( 'jav-view-item' ) . $item->id] ) ){
 			$item->votes =  $_COOKIE[md5( 'jav-view-item' ) . $item->id];
 		}
 		?>
-		<li class="jav-your-box-item">
+		<li class="jav-your-box-item"> 
         	<?php if($javconfig ['systems']->get ( 'is_use_vote', 1 )):?>
 			<div class="jav-badge">
 				<div class="jav-moderation">
@@ -40,18 +40,10 @@ global $javconfig;
 			</div>
 			<?php endif;?>	
 				<div class="jav-item-details <?php if(!$javconfig ['systems']->get ( 'is_use_vote', 1 )):?> jav-detail-no-vote<?php endif;?>">
-					<h2 class="jav-contentheading clearfix">
+					
 						<?php $link = JRoute::_('index.php?option=com_javoice&view=items&layout=item&cid='.$item->id.'&type='.$item->voice_types_id.'&amp;Itemid='.$Itemid);?>
-						<a href="<?php echo $link;?>" class="title"><?php echo $item->title?></a>
-						
-						<span class="jav-item-status">
-							<?php if($item->voice_type_status_id){?>
-								<span class="jav-tag" style="background: <?php echo $item->status_class_css?>"> <?php echo $item->status_title?> </span>								
-							<?php }?> 
-						</span>
-					</h2>		
+						<a href="<?php echo $link;?>" class="ja-title"><?php echo $item->title?></a>
 				</div>
-				
 		</li>										
 	<?php }?>
 </ul>	
