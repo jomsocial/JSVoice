@@ -234,18 +234,12 @@ ul.jav-menu div.jav-item-details {
 	margin-left: 30px;
 }
 
-div.jav-item-details h2 {
-	font-size: 100%;
-}
-div.jav-item-details h2.contentheading {
-	font-size: 120%;
-}
-
 div.jav-item-details a.jav-item-title {
 	display: block;
 	float: left;
-	font-size: 16px;
-  	margin: -10px 10px 0 5px;
+	font-size: 18px;
+	font-weight: bold;
+  	margin: 10px 15px 0 5px;
 	padding: 0;
 }
 
@@ -606,16 +600,16 @@ div.jav-moderation .pop-in li a.jav-disable {
 .jav-item-status {
 	display: block;
 	float: left;
-	margin: -10px 0 0 0;
+	margin-top: 10px;
 	position: relative;
 }
 
 .jav-tag {
 	background: #BBBBBB;
 	color: #FFFFFF !important;
-	font-size: 10px;
+	font-size: 12px;
 	letter-spacing: 0;
-	padding: 2px 10px;
+	padding: 0 5px;
 	display: inline-block;
 	text-transform: none;
 }
@@ -1956,4 +1950,10 @@ ul.jav-menu li.jav-your-box-item {
 }
 .ja-title {
 	padding-top:5px;
+}
+ul.jav-menu li {
+	list-style: none;
+}
+ul.jav-menu li a small {
+	 
 }
