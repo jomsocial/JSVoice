@@ -120,7 +120,7 @@ if($items){?>
 				<img class="jav-avatar" src="<?php echo $item->avatar[0];?>" style="<?php echo $item->avatar[1]?>"/>
 				<?php }?>
 				<div class="jav-item-details-content">
-					<h2 class="jav-contentheading">
+					
 						<?php
 						if(JRequest::getInt('view_detail',0)) $link = '#'; 
 						else $link = JRoute::_('index.php?option=com_javoice&view=items&layout=item&cid='.$item->id.'&type='.$item->voice_types_id.'&amp;Itemid='.$Itemid);						
@@ -159,7 +159,7 @@ if($items){?>
 	
 						<?php }?>
 						
-					</h2>
+					
 					<br/>
 					<div class="jav-item-content clearfix">
 						<?php 																				
