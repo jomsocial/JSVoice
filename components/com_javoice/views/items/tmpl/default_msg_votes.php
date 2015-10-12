@@ -17,7 +17,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<div style="display: block;" onclick="UserVoice.Dialog.close(); return false;" class="uservoice-component" id="uservoice-overlay"></div>
 	
 	<div class="uservoice-component" id="uservoice-dialog">
-		<a id="jav-dialog-close" onclick="$('jav-dialog').setStyle('display', 'none'); return false;" href="#"></a>
+		<a id="jav-dialog-close" onclick="jQuery('#jav-dialog').css('display', 'none'); return false;" href="#"></a>
 		<div id="uservoice-dialog-content">
 			<div id="what-now">
 				  <h1><?php echo JText::_("YOURE_OUT_OF_VOTES")?> <small><?php echo JText::_('WHAT_NOW')?></small></h1>
@@ -46,7 +46,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	<div style="display: block;" onclick="UserVoice.Dialog.close(); return false;" class="uservoice-component" ></div>
 	
 	<div class="uservoice-component" id="jav-uservoice-dialog">
-		<a id="jav-dialog-close-1" onclick="$('jav-firsttime-voting').setStyle('display', 'none'); return false;" href="#"></a>
+		<a id="jav-dialog-close-1" onclick="jQuery('#jav-firsttime-voting').css('display', 'none'); return false;" href="#"></a>
 		<div id="jav-uservoice-dialog-content">
 			<div id="jav-what-now">
 				  <?php echo JText::_("USE_YOUR_VOTES_WISELY_BECAUSE_YOU_HAVE_LIMITED_VOTES_YOUR_VOTE_WILL_BE_RETURNED_WHEN_YOUR_VOICE_IS_MARKED_COMPLETEDCLOSED");?>
@@ -56,16 +56,34 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 </div>
 
 <script type="text/javascript">
-window.addEvent('load', function (event){
-	var oldel = $('jav-dialog');
-	$('jav-dialog').destroy();		
-	oldel.inject($(window.document.body));		
-					
-	oldel = $('jav-firsttime-voting');
-	$('jav-firsttime-voting').destroy();		
-	oldel.inject($(window.document.body));
-	
-	jav_showNoticeToCenter(400, 40, 'jav-firsttime-voting');
-	$('jav-firsttime-voting').setStyle('display', 'none');
+function jav_setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function jav_getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1);
+		if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+
+jQuery(document).ready(function($) {
+	var oldel = $('#jav-dialog');
+	oldel.appendTo( document.body );
+	oldel = $('#jav-firsttime-voting');
+	oldel.appendTo( document.body );
+	if ( jav_getCookie('firsttime_voting_popup') ) {
+		$('#jav-firsttime-voting').css('display', 'none');
+	} else {
+		jav_setCookie('firsttime_voting_popup', 1, 1);
+		jav_showNoticeToCenter(400, 40, 'jav-firsttime-voting');
+	}
 });
 </script>

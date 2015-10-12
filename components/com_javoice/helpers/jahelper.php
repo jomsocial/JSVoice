@@ -1476,9 +1476,9 @@ class JAPermissions{
 		?>
 		<script type="text/javascript">
 			function validate(){
-				if($('key').value.trim()==''){
+				if(jQuery('#key').val().trim()==''){
 					alert('<?php echo JText::_("PLEASE_ENTER_YOUR_LICENSE_KEY" )?>');
-					$('key').focus();
+					jQuery('#key').focus();
 					return false;
 				}
 				document.adminForm.disabled = true;

@@ -24,7 +24,7 @@ if(isset($this->callAddNewButton)){
 
 <ol>
 	<li class="jav-back">
-		<a onclick="jav_reset('key-<?php echo $this->type_id?>'); jav_findWord(event, $('key-<?php echo $this->type_id?>'), '<?php echo $link?>', '<?php echo $this->type_id?>'); return false;" href="javascript:void(0)">
+		<a onclick="jav_reset('key-<?php echo $this->type_id?>'); jav_findWord(event, jQuery('#key-<?php echo $this->type_id?>')[0], '<?php echo $link?>', '<?php echo $this->type_id?>'); return false;" href="javascript:void(0)">
 			<?php echo JText::_('BACK_TO_TOP')?>
 		</a>
 	</li>

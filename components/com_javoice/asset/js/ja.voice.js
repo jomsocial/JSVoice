@@ -8,13 +8,9 @@ var timeout = '';
 var jav_ajax = '';
 var jav_header = 'ja-header';
 
-window.addEvent('domready', function (){
-	
-	if($('jav-msg-succesfull') != undefined){		
-		// obj = $('jav-msg-succesfull');
-		// $('jav-msg-succesfull').destroy();		
-		// obj.injectInside($(window.document.body));		
-		$('jav-msg-succesfull').inject($(window.document.body));		
+jQuery(document).ready(function($) {
+	if( !$("#jav-msg-succesfull").length ) {
+		$(document.body).append("<div id='jav-msg-succesfull'></div>");
 	}	
 });
 
@@ -76,16 +72,16 @@ function checkTypeOfTooltip(divId, type, width, height, time_delay) {
 			break;
 		case 'auto_hide':
 			$(divId).show('slow');
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				$(divId).hide('slow');
-			}).delay(time_delay);
+			}, time_delay);
 
 			$(divId).hover( function() {
 				clearTimeout (timeout);
 			}, function() {
-				timeout = ( function() {
+				timeout = setTimeout( function() {
 					$(divId).hide('slow');
-				}).delay(time_delay);
+				}, time_delay);
 			});
 			break;
 		case 'normal':
@@ -739,9 +735,10 @@ function jav_ajaxPagination(url,divid) {
 	}
 	
 	new_url += 'layout=paging';
-	if($("jav-forum-select").value !=0) url += "&forums=" + $("jav-forum-select").value;
-	
+	if(jQuery("#jav-forum-select").val() !=0) url += "&forums=" + jQuery("#jav-forum-select").val();
+
 	if($("key-"+jav_option_type).value !='' && $("key-"+jav_option_type).value !='Add your idea...') url +="&key=" + $("key-"+jav_option_type).value;
+
 	url = jav_base_url+"?index.php"+url;
 
 	jav_ajax_load(url, jav_option_type);
@@ -837,7 +834,7 @@ function jav_checkAddActionForJAComment(add_button){
 	jQuery(document).ready( function($) {
 		if (!jaCommentAddButton){
 			
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				
 				if(add_button){
 					/*Add button*/
@@ -869,7 +866,7 @@ function jav_checkAddActionForJAComment(add_button){
 					
 				}				
 				
-			}).delay(100);
+			}, 100);
 			
 		} else {		
 			clearTimeout(timeout);
@@ -1077,7 +1074,7 @@ function jav_checkAddActionForDisqus(add_button){
 	jQuery(document).ready( function($) {
 		if (!disqusAddButton){
 			
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				jav_checkAddActionForDisqus(add_button);
 				if(add_button){
 					/*Add button*/
@@ -1102,7 +1099,7 @@ function jav_checkAddActionForDisqus(add_button){
 				
 				disqusAddButton = true;
 				
-			}).delay(700);
+			}, 700);
 			
 		} else {		
 			clearTimeout(timeout);
@@ -1118,7 +1115,7 @@ function jav_jskit(add_button) {
 		if (!jskitAddButton){
 		/*Add button*/		
 			if (add_button) {
-				timeout = ( function() {
+				timeout = setTimeout( function() {
 					
 					jav_jskit(add_button);
 					
@@ -1140,7 +1137,7 @@ function jav_jskit(add_button) {
 						});					
 					}					
 					
-				}).delay(700);
+				}, 700);
 				
 				jskitAddButton = true;
 			}
@@ -1212,7 +1209,7 @@ function jav_checkAddActionForIntensedebate(add_button){
 	jQuery(document).ready( function($) {
 		if (typeof(id_add_action) != 'function' ){
 			
-			timeout = ( function() {
+			timeout = setTimeout( function() {
 				jav_checkAddActionForIntensedebate(add_button);
 				if(add_button){
 					/*Add button*/
@@ -1236,7 +1233,7 @@ function jav_checkAddActionForIntensedebate(add_button){
 					}
 				}
 				
-			}).delay(700);
+			}, 700);
 			
 		} else {		
 			clearTimeout (timeout);
@@ -1259,7 +1256,7 @@ function jav_doPaging( limitstart, limit, order, key, url ){
 	if(key){
 		mainUrl += "&key=" + escape(key);
 	}
-	if($("jav-forum-select").value !=0) mainUrl += "&forums_id=" + $("jav-forum-select").value;
+	if(jQuery("#jav-forum-select").val() !=0) mainUrl += "&forums_id=" + jQuery("#jav-forum-select").val();
 	
 	if(url){
 		mainUrl = url+"&limitstart=" + eval(limitstart) + '&limit=' + eval(limit);
@@ -1443,7 +1440,7 @@ function show_frm_response(node, id, responeid){
 		var name ='response-'+id;			
 		$("#div-"+name).show('fast');
 		$("#newVoiceContentReply").val($("#jav-content-respone-" + id).val());		
-		if(typeOf(total_attach_file)){			
+		if(typeof window.total_attach_file !== "undefined"){
 			$("#jav_result_reply_upload").html("");
 			
 			numberUpload = $('#jav-box-item-' + id + ' .jav-upload-form').find('input').length;
@@ -1468,7 +1465,7 @@ function show_frm_response(node, id, responeid){
 }
 
 function cancel_frm_response(){	
-	if(typeOf(jav_current_active_voice)){
+	if(typeof window.jav_current_active_voice !== "undefined"){
 		if(jav_current_active_voice){
 			jQuery(document).ready( function($) {
 				form = $("#jav-container-response-" + jav_current_active_voice).html();		
@@ -1547,7 +1544,7 @@ function jav_submit_admin_response(item_id, id){
 function jav_checkLoadedComment (time_delay) {
 	jQuery(document).ready( function($) {
 		$('#jav-list-comment').hide();
-		timeout = ( function() {
+		timeout = setTimeout( function() {
 			if ($('#idc-container-parent'))
 			{
 				
@@ -1557,7 +1554,7 @@ function jav_checkLoadedComment (time_delay) {
 				clearTimeout (timeout);
 				jav_checkLoadedComment(jav_checkLoadedComment);
 			}
-		}).delay(time_delay);
+		}, time_delay);
 	});
 }
 
@@ -1633,7 +1630,7 @@ function show_frm_bestanswer(node, id, bestanswerid){
 		}
 		$("#newVoiceContentReply").val(jav_content_bestanswer);
 		
-		if(typeOf(total_attach_file)){			
+		if(typeof window.total_attach_file !== "undefined"){
 			$("#jav_result_reply_upload").html("");
 			
 			numberUpload = $('#jav-box-item-' + id + ' .jav-upload-form').find('input').length;
@@ -1726,7 +1723,7 @@ function jav_submit_bestanswer(item_id, id){
 }
 
 function cancel_frm_bestanswer(){
-	if(typeOf(jav_current_active_voice)){
+	if(typeof window.jav_current_active_voice !== "undefined"){
 		if(jav_current_active_voice){
 			jQuery(document).ready( function($) {
 				form = $("#jav-container-bestanswer-" + jav_current_active_voice).html();		
@@ -1835,17 +1832,17 @@ function jav_showNoticeToCenter(xwidth,yheight,divid) {
 } 
 
 function jav_change_vars(type_id){
-	jav_vote_total = $('votes-left-'+type_id).value;
+	jav_vote_total = jQuery('#votes-left-'+type_id).val();
 	jav_option_type = type_id;
 	var url = siteurl + '&task=load_forums&type='+parseInt(type_id);
 	jav_ajax_load(url);
 }
 function closemessage(){
-	jQuery(document).ready(function($) {
+	(function($) {
 		id='#'+jav_header;
 		$(id).css('z-index','10');
 		$('#jav-msg-succesfull').css('display','none');
-	});	
+	})(jQuery)
 }
 function displaymessage(){
 	jQuery(document).ready(function($) {
@@ -1944,12 +1941,9 @@ function loadLoginComplete(){
 	jQuery("input[name=return]").attr('value',jav_base_url_login) ;
 }
 jQuery(document).ready( function($) {
-	$('li').click( function() {
-		var active = $$('li');
-		for ( var i = 0; i < active.length; i++) {
-			active[i].removeClass('focused');
-		}
-		this.addClass('focused');
+	$('li').click(function() {
+		$('li').addClass('focused')
+			.siblings().removeClass('focused');
 	});
 });
 function display_plugin(type){
@@ -1991,7 +1985,7 @@ function insertsmiley(content){
 }
 
 function loadNewCaptcha(){	            				
-	$("jav_image_captcha").src =  "index.php?option=com_javoice&view=items&task=displaycaptchaaddnew&tmpl=component&ran=" + Math.random();	
+	jQuery("#jav_image_captcha")[0].src =  "index.php?option=com_javoice&view=items&task=displaycaptchaaddnew&tmpl=component&ran=" + Math.random();	
 }
 function actionLoadNewCaptcha(action){
 	//show image load new
@@ -2071,19 +2065,19 @@ function insertSmileyReply(which) {
 function javOpenAttachFile(id){
 	if(id !=0 || id != ""){
 		//reply a new voice
-		if($("jav-form-upload-reply").style.display == "none"){
-			$("jav-form-upload-reply").style.display = "block";
+		if(jQuery("#jav-form-upload-reply")[0].style.display == "none"){
+			jQuery("#jav-form-upload-reply")[0].style.display = "block";
 		}else{
-			$("jav-form-upload-reply").style.display = "none";
+			jQuery("#jav-form-upload-reply")[0].style.display = "none";
 		}
 	}
 	//add new or edit voice
 	else{
-		if($("jav-form-upload").style.display == "none"){
-			$("jav-form-upload").style.display = "block";
+		if(jQuery("#jav-form-upload")[0].style.display == "none"){
+			jQuery("#jav-form-upload")[0].style.display = "block";
 			window.location.href += "#jav-form-upload";
 		}else{
-			$("jav-form-upload").style.display = "none";
+			jQuery("#jav-form-upload")[0].style.display = "none";
 		}
 	}
 }
@@ -2125,12 +2119,11 @@ function jav_handleEnter (field, event) {
 	return true;
 }     
 function jav_show_dialog(box, subbox){
-	$(box).setStyles({'display':'block'});
+	jQuery(box).css({'display':'block'});
 	var size = $(window.document.body).getSize();
 	var left = (size.size.x - $(subbox).offsetWidth)/2;
 	var top = 100;
-	
-	$(box).setStyles({'top':top, 'left':left});
+	jQuery(box).css({'top':top, 'left':left});
 }
 function suggest(inputString){
 	jQuery(document).ready( function($) {		

@@ -150,11 +150,11 @@
 		var forum_id = $('#jav-forum-select').attr('value');
 		if(forum_id>0)url +="&forum_id="+forum_id;
 		
-		var req = new Request({
+		var req = new jQuery.ajax({
 			method: 'get',
 			url: url,		
-			onComplete: function(text) { 
-				$('#jaFormContent').html(text);
+			complete: function(data) { 
+				$('#jaFormContent').html(data.responseText);
 				if(jatask.indexOf("&layout=add&type=") != -1 || jatask.indexOf("&layout=edit&type=") != -1){			
 					if(typeof(DCODE) !== 'undefined' && $("#newVoiceContent").length > 0){				
 						DCODE.setTags (["LARGE", "MEDIUM", "HR", "B", "I", "U", "S", "UL", "OL", "SUB", "SUP", "QUOTE", "LINK", "IMG", "YOUTUBE", "HELP"]);
@@ -166,17 +166,14 @@
 						id='#'+jav_header;
 						$(id).css('z-index','10');			
 						$('#loader').hide();
-					}			
-					$('li').click( function() {
-						var active = $$('li');
-						for ( var i = 0; i < active.length; i++) {
-							active[i].removeClass('focused');
-						}
-						this.addClass('focused');
+					}
+					$('li').click(function() {
+						$('li').addClass('focused')
+							.siblings().removeClass('focused');
 					});
 				}); 
 			}
-		}).send();		
+		});
 	
 		ajax_loaded = true;
 	

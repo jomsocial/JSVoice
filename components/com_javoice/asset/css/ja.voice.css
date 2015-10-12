@@ -12,11 +12,11 @@
 ---------------------------------------------*/
 ul.jav-menu li.jav-your-box-item,
 ol li.jav-box-item {
-	border-bottom: 1px solid #E8E8E8;
+	border: 1px solid #E8E8E8;
 	display: block;
 	margin: 0 0 10px 0 !important;
 	min-height: 100px;
-	padding: 0 0 10px 0;
+	padding: 5px;
 	position:relative;
 	width: 100%;
 }
@@ -184,10 +184,10 @@ ul.jav-menu li.jav-your-box-item {
 /* BADGE STYLE
 ---------------------------------------------*/
 div.jav-badge {
-	left: 0;
+	left: 5px;
 	position: absolute;
 	top: 5px;
-	width: 50px;
+	width: 60px;
 }
 
 .jav-col2 div.jav-badge {
@@ -244,7 +244,8 @@ div.jav-item-details h2.contentheading {
 div.jav-item-details a.jav-item-title {
 	display: block;
 	float: left;
-	margin: 0 10px 0 0;
+	font-size: 16px;
+  margin: -10px 10px 0 5px;
 	padding: 0;
 }
 

@@ -14,7 +14,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );?>
 <script type="text/javascript" charset="utf-8">
 //<![CDATA[
 function submit_email_preference(){
-	var mainUrl = jav_base_url + "index.php?tmpl=component&option=com_javoice&view=users&task=setEmailNotificationReferences&votedVoiceUpdateNotification="+$('votedVoiceUpdateNotification').value+ '&receive='+$('receive').value+ '&often='+$('often').value;	
+	var mainUrl = jav_base_url + "index.php?tmpl=component&option=com_javoice&view=users&task=setEmailNotificationReferences&votedVoiceUpdateNotification="+jQuery('#votedVoiceUpdateNotification').val()+ '&receive='+jQuery('#receive').val()+ '&often='+jQuery('#often').val();
 	jav_ajax_load(mainUrl);
 }
 //]]>
