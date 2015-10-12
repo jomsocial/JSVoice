@@ -741,9 +741,9 @@ function jav_ajaxPagination(url,divid) {
 	new_url += 'layout=paging';
 	if($("jav-forum-select").value !=0) url += "&forums=" + $("jav-forum-select").value;
 	
-	if($("key-"+jav_option_type).value !='') url +="&key=" + $("key-"+jav_option_type).value;
+	if($("key-"+jav_option_type).value !='' && $("key-"+jav_option_type).value !='Add your idea...') url +="&key=" + $("key-"+jav_option_type).value;
 	url = jav_base_url+"?index.php"+url;
-	
+
 	jav_ajax_load(url, jav_option_type);
 	//pr_ajax = new Ajax(url,{method:'get', update:divid, onComplete:update}).request(); 
 }
