@@ -10,7 +10,7 @@ var jav_header = 'ja-header';
 
 jQuery(document).ready(function($) {
 	if( !$("#jav-msg-succesfull").length ) {
-		$(document.body).append("<div id='jav-msg-succesfull'></div>");
+		$(document.body).append('<div id="jav-msg-succesfull" style="display:none"></div>');
 	}	
 });
 

@@ -1108,12 +1108,18 @@ tr.jav-inviteformactiveelement {
 #jav-msg-succesfull {
 	background: yellow;
 	font-weight: bold;
-	left: 0;
-	padding: 10px;
+	left: 50%;
+	padding: 20px;
 	position: fixed;
-	top: 0;
-	width: 100%;
+	top: 50%;
+	width: 300px;
 	z-index: 9999;
+	-webkit-transform: translate(-50%,-50%); /* Safari */
+	    -ms-transform: translate(-50%,-50%); /* IE 9 */
+	        transform: translate(-50%,-50%);
+	-webkit-box-shadow: 1px 1px 6px rgba(102,102,102,1);
+	   -moz-box-shadow: 1px 1px 6px rgba(102,102,102,1);
+	        box-shadow: 1px 1px 6px rgba(102,102,102,1);
 }
 
 .created-at{
