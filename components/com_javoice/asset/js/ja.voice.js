@@ -610,7 +610,7 @@ function validation(){
 		}else{
 			$('#title-msg').hide();
 		}
-		if($('#forums_id')=='undefine' || $('#forums_id').attr('value')=='' || $('#forums_id').attr('value')==0){
+		if($('#forums_id')=='undefine' || $('#forums_id').val()=='' || $('#forums_id').val()==0){
 			$('#forums_id-msg').show();
 			if(isFocus == 0){
 				$('#forums_id').focus();
@@ -645,17 +645,28 @@ function validation(){
 			$('#err_javGuestName').hide();
 		}
 		
-		if($('#newVoiceContent').length >0){
-			if($("#newVoiceContent")[0].tagName != "TEXTAREA"){
-				$("#err_exitchekspelling").show();
-				alert($("#err_exitchekspelling").html());
-				isFocus == 1;
-				check = false;				
-			}else{
-				$("#err_exitchekspelling").hide();
+		var $content = $('[name=javNameOfTextarea]');
+		if ( $content.length ) {
+			$content = $('#' + $content.val());
+			if ( $content.length ) {
+				if ( $content[0].tagName.toLowerCase() != 'textarea' ) {
+					$("#err_exitchekspelling").show();
+					$("#err_enter_description").hide();
+					alert($("#err_exitchekspelling").html());
+					isFocus == 1;
+					check = false;
+				} else if ( $.trim($content.val()) == '' ) {
+					$("#err_enter_description").show();
+					$("#err_exitchekspelling").hide();
+					isFocus == 1;
+					check = false;
+				} else {
+					$("#err_exitchekspelling").hide();
+					$("#err_enter_description").hide();
+				}
 			}
 		}
-		
+
 		if($('#javGuestEmail').length >0){			
 			if($('#javGuestEmail').attr('value')==''){								
 				$('#err_javGuestEmail').show();

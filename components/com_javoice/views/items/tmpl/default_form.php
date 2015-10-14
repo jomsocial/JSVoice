@@ -153,6 +153,7 @@ if (typeof(jav_tag_config) == "undefined") {
 					<!--END  Upload form-->		
 				</ul>				
 				<div id="err_exitchekspelling" class="error" style="display: none;"><?php echo JText::_("PLEASE_EXIT_SPELL_CHECK_BEFORE_SUBMITTING_VOICE");?></div>
+				<div id="err_enter_description" class="error" style="display: none;"><?php echo JText::_("PLEASE_ENTER_DESCRIPTION");?></div>
 			</div>											
 		</li>		
 		
