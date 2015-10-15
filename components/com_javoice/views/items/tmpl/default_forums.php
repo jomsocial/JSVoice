@@ -14,8 +14,8 @@ global $javconfig;
 ?>
 <?php if(!$javconfig["systems"]->get("is_enable_tagging", 0) || !JRequest::getVar("tagid",0)):?> 
 <input type="hidden" id="forums-<?php echo $this->type_id?>" value="<?php echo JRequest::getInt('forums')?>"/>
-<h3><span><?php echo JText::_('FORUMS')?></span></h3>
 <ul class="jav-menu">
+	<h4><span><?php echo JText::_('CATEGORIES')?></span></h4>
 <?php
 $Itemid = JRequest::getInt('Itemid');
 $list_forums = $this->list_forums;
