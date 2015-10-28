@@ -645,7 +645,7 @@ function validation(){
 			$('#err_javGuestName').hide();
 		}
 		
-		var $content = $('[name=javNameOfTextarea]');
+		var $content = $('#jac-container-textarea [name=javNameOfTextarea]');
 		if ( $content.length ) {
 			$content = $('#' + $content.val());
 			if ( $content.length ) {
