@@ -1050,6 +1050,8 @@ tr.jav-inviteformactiveelement {
 
 #jav-dialog-content label, jav-guest-info LABEL {
 	color: #666666;
+	display: inline-block !important;
+	padding-right: 10px;
 }
 
 #jav-dialog-content ol {
