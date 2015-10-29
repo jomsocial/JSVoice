@@ -77,17 +77,20 @@ if( $items ){
 		
 		
 	<?php } else if ($sytem_comment == 'disqus') {?>
-	
+
 		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-			//<![CDATA[
-			var disqus_developer = "<?php echo $mode;?>";
-			var disqus_url= "<?php echo $link?>";
-			var disqus_identifier = "<?php echo $item->id?>";				
-			//]]>
-		</script>   
-		<script type="text/javascript" src="http://disqus.com/forums/<?php echo $javconfig['integrate']->get('account_'.$sytem_comment)?>/embed.js"></script><noscript><a href="http://{subdomain}.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-		
+		<script>
+		var disqus_config = function () {
+			this.page.identifier = '<?php echo $item->id; ?>';
+		};
+		(function() {  // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = '//<?php echo $javconfig["integrate"]->get("account_".$sytem_comment)?>.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 		
 	<?php } elseif($sytem_comment == 'jacomment' && $this->jacomment){?>
 			{jacomment contentid=<?php echo $item->id?> option=com_javoice contenttitle=<?php echo $item->title ?>}
