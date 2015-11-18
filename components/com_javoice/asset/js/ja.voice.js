@@ -748,9 +748,12 @@ function jav_ajaxPagination(url,divid) {
 	new_url += 'layout=paging';
 	if(jQuery("#jav-forum-select").val() !=0) url += "&forums=" + jQuery("#jav-forum-select").val();
 
-	if($("key-"+jav_option_type).value !='' && $("key-"+jav_option_type).value !='Add your idea...') url +="&key=" + $("key-"+jav_option_type).value;
+	var key = jQuery("#key-"+jav_option_type);
+	if (key.val() != '' && key.attr('onblur').indexOf( key.val() ) < 0) {
+		url += "&key=" + key.val();
+	}
 
-	url = jav_base_url+"?index.php"+url;
+	url = jav_base_url + "index.php?" + url;
 
 	jav_ajax_load(url, jav_option_type);
 	//pr_ajax = new Ajax(url,{method:'get', update:divid, onComplete:update}).request(); 
