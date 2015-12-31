@@ -84,7 +84,7 @@ if (!defined('JAVOICE_GLOBAL_JS')) {
 	
 	$javersion = new JVersion();
 	$document = JFactory::getDocument();
-	$document->addScript('http://code.jquery.com/jquery-1.8.3.min.js');
+	$document->addScript('//code.jquery.com/jquery-1.8.3.min.js');
 	
     JHtml::_('script','components/com_javoice/asset/js/ja.voice.js');
     JHtml::_('script','components/com_javoice/asset/js/ja.popup.js');

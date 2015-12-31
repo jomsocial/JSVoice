@@ -46,7 +46,7 @@ if(!defined('JAVOICE_GLOBAL_SKIN')){
 	
 	$document = JFactory::getDocument();
 	
-	$document->addScript('http://code.jquery.com/jquery-1.8.3.min.js');
+	$document->addScript('//code.jquery.com/jquery-1.8.3.min.js');
 	
 	$document->addStyleSheet(JURI::root().'administrator/components/com_javoice/asset/css/ja.voice.css');
 	
